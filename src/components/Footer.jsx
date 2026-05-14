@@ -23,15 +23,12 @@ export default function Footer() {
       <div className="container-xl pt-16 pb-10 flex flex-col items-center text-center gap-5">
 
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-brand-orange flex items-center justify-center rounded-sm">
-            <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <span className="text-lg font-extrabold tracking-wide text-white uppercase">
-            Motus <span className="text-brand-orange">Sistem</span>
-          </span>
+        <Link to="/" className="flex items-center">
+          <img
+            src="/logos/logo-beyaz-yatay.png"
+            alt="Motus Sistem"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         {/* Stars */}

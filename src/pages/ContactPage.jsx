@@ -49,20 +49,12 @@ function ContactHero() {
             className="lg:col-span-3 relative overflow-hidden"
             style={{ borderRadius: '16px 16px 16px 0', minHeight: '340px' }}
           >
-            {/* Photo placeholder */}
-            <div
-              className="absolute inset-0"
-              style={{ background: 'linear-gradient(130deg, #b0c0cc 0%, #8090a0 60%, #607080 100%)' }}
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white/20">
-                  <svg className="w-20 h-20 mx-auto mb-2 opacity-30" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <p className="text-sm">Fotoğraf</p>
-                </div>
-              </div>
-            </div>
+            <img
+              src="/images/gorsel-2.png"
+              alt="Motus Sistem — Enerji Sistemleri"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.2) 100%)' }} />
           </div>
         </div>
 
@@ -501,19 +493,12 @@ export default function ContactPage() {
               className="relative overflow-hidden min-h-[420px] lg:min-h-0"
               style={{ borderRadius: '16px' }}
             >
-              <div
-                className="absolute inset-0"
-                style={{ background: 'linear-gradient(135deg, #7a8a9a 0%, #4a5a6a 100%)' }}
-              >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white/20">
-                    <svg className="w-20 h-20 mx-auto mb-2 opacity-30" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <p className="text-sm">Elektrikçi Fotoğrafı</p>
-                  </div>
-                </div>
-              </div>
+              <img
+                src="/images/gorsel-4.png"
+                alt="Motus Sistem — UPS ve Pano Sistemleri"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 100%)' }} />
             </div>
 
             {/* RIGHT — orange form card */}

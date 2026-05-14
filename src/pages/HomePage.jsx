@@ -44,17 +44,12 @@ function HeroSection() {
           <div className="relative flex justify-center lg:justify-end z-10">
             {/* Main photo card */}
             <div className="relative w-full max-w-md">
-              <div
-                className="rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] bg-gray-800 flex items-center justify-center"
-                style={{ background: 'linear-gradient(135deg, #FB5800 0%, #c0392b 100%)' }}
-              >
-                {/* Placeholder for electrician photo */}
-                <div className="text-center text-white/60 p-8">
-                  <svg className="w-20 h-20 mx-auto mb-3 opacity-50" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  <p className="text-sm">Elektrikçi Fotoğrafı</p>
-                </div>
+              <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+                <img
+                  src="/images/gorsel-2.png"
+                  alt="Motus Sistem — Jeneratör, UPS, Solar, Pano Sistemleri"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Trust badge floating card */}
@@ -194,28 +189,14 @@ function WhoWeAre() {
           <div className="relative">
             {/* Main photo frame */}
             <div
-              className="relative overflow-hidden bg-gray-200 aspect-[3/4] max-w-md mx-auto lg:mx-0"
+              className="relative overflow-hidden aspect-[3/4] max-w-md mx-auto lg:mx-0"
               style={{ borderRadius: '12px 12px 0 12px' }}
             >
-              {/* Photo placeholder */}
-              <div
-                className="absolute inset-0 flex items-center justify-center"
-                style={{ background: 'linear-gradient(160deg, #e8f0f8 0%, #c8d8e8 100%)' }}
-              >
-                <div className="text-center text-gray-400">
-                  <svg className="w-24 h-24 mx-auto mb-3 opacity-40" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  <p className="text-sm">Elektrikçi Fotoğrafı</p>
-                </div>
-              </div>
-
-              {/* Lightning bolt accent in background */}
-              <div className="absolute bottom-16 right-6 opacity-10">
-                <svg className="w-32 h-32 text-brand-orange" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
+              <img
+                src="/images/gorsel-4.png"
+                alt="Motus Sistem — UPS ve Pano Sistemleri"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Name tag card at bottom */}
@@ -256,13 +237,13 @@ function WhoWeAre() {
 // ── Services ──────────────────────────────────────────────────────────────────
 
 const serviceCards = [
-  { title: 'Dizel Jeneratörler',      href: '/urunler/dizel-jeneratorler',          bg: 'linear-gradient(135deg, #4a5a6a 0%, #2a3a4a 100%)' },
-  { title: 'Portatif Jeneratörler',   href: '/urunler/portatif-jeneratorler',       bg: 'linear-gradient(135deg, #5a6a5a 0%, #3a4a3a 100%)' },
-  { title: 'Jeneratör Kabin Setleri', href: '/urunler/jenerator-kabin-setleri',     bg: 'linear-gradient(135deg, #6a5a4a 0%, #4a3a2a 100%)' },
-  { title: 'UPS Sistemleri',          href: '/urunler/ups',                         bg: 'linear-gradient(135deg, #5a4a6a 0%, #3a2a4a 100%)' },
-  { title: 'Solar Pompa Sistemleri',  href: '/urunler/solar-sistemler/pompa',       bg: 'linear-gradient(135deg, #4a6a5a 0%, #2a4a3a 100%)' },
-  { title: 'Ev Paket Çözümleri',      href: '/urunler/solar-sistemler/ev-paket',    bg: 'linear-gradient(135deg, #6a6a4a 0%, #4a4a2a 100%)' },
-  { title: 'Senkron Panolar',         href: '/urunler/panolar/senkron',             bg: 'linear-gradient(135deg, #6a4a4a 0%, #4a2a2a 100%)' },
+  { title: 'Dizel Jeneratörler',      href: '/urunler/dizel-jeneratorler',       img: '/images/gorsel-3.png' },
+  { title: 'Portatif Jeneratörler',   href: '/urunler/portatif-jeneratorler',    img: '/images/gorsel-6.png' },
+  { title: 'Jeneratör Kabin Setleri', href: '/urunler/jenerator-kabin-setleri',  img: '/images/gorsel-7.png' },
+  { title: 'UPS Sistemleri',          href: '/urunler/ups',                      img: '/images/gorsel-4.png' },
+  { title: 'Solar Pompa Sistemleri',  href: '/urunler/solar-sistemler/pompa',    img: '/images/gorsel-5.png' },
+  { title: 'Ev Paket Çözümleri',      href: '/urunler/solar-sistemler/ev-paket', img: '/images/gorsel-1.png' },
+  { title: 'Senkron Panolar',         href: '/urunler/panolar/senkron',          img: '/images/gorsel-4.png' },
 ]
 
 function ServicesSection() {
@@ -286,12 +267,13 @@ function ServicesSection() {
               className="group relative overflow-hidden bg-white flex flex-col"
               style={{ borderRadius: '20px', aspectRatio: '1 / 1' }}
             >
-              {/* Photo area — fills the card, shrinks on hover to reveal label */}
-              <div
-                className="flex-1 relative overflow-hidden transition-all duration-300"
-                style={{ background: card.bg }}
-              >
-                <span className="absolute bottom-2 left-0 right-0 text-center text-white/30 text-xs">Fotoğraf</span>
+              {/* Photo area */}
+              <div className="flex-1 relative overflow-hidden transition-all duration-300">
+                <img
+                  src={card.img}
+                  alt={card.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
 
               {/* Label bar — white bg, turns orange on hover */}
@@ -460,16 +442,16 @@ function AdviceBanner() {
       className="relative w-full overflow-hidden"
       style={{ minHeight: '420px' }}
     >
-      {/* Background photo placeholder — replace src with real image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          background: 'linear-gradient(105deg, #4a5a6a 0%, #7a8a9a 40%, #9aaab8 100%)',
-        }}
-      >
-        {/* Dark vignette on left & right edges */}
+      {/* Background photo */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/gorsel-1.png"
+          alt="Motus Sistem Enerji Sistemleri"
+          className="w-full h-full object-cover"
+        />
+        {/* Dark vignette */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.05) 35%, rgba(0,0,0,0.05) 65%, rgba(0,0,0,0.55) 100%)'
+          background: 'linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.65) 100%)'
         }} />
       </div>
 
@@ -647,25 +629,25 @@ function WhyChooseUs() {
 // Carousel slides: each slide has a "large" featured card + a "tall" card
 const gallerySlides = [
   {
-    large: { label: 'Solar Çözümler',     bg: 'linear-gradient(135deg,#7a9a6a 0%,#4a6a4a 100%)' },
-    tall:  { label: 'Pano Yükseltme',     bg: 'linear-gradient(135deg,#5a6a7a 0%,#3a4a5a 100%)' },
+    large: { label: 'Jeneratör Sistemleri', img: '/images/gorsel-3.png' },
+    tall:  { label: 'UPS & Pano',           img: '/images/gorsel-4.png' },
   },
   {
-    large: { label: 'EV Şarj Kurulumu',   bg: 'linear-gradient(135deg,#6a8a9a 0%,#3a6a7a 100%)' },
-    tall:  { label: 'Aydınlatma Kurulumu',bg: 'linear-gradient(135deg,#9a8a6a 0%,#6a5a3a 100%)' },
+    large: { label: 'Solar Enerji',         img: '/images/gorsel-5.png' },
+    tall:  { label: 'Portatif Jeneratör',   img: '/images/gorsel-6.png' },
   },
   {
-    large: { label: 'Acil Servis',        bg: 'linear-gradient(135deg,#9a6a5a 0%,#6a3a2a 100%)' },
-    tall:  { label: 'Elektrik Tamiri',    bg: 'linear-gradient(135deg,#8a7a9a 0%,#5a4a6a 100%)' },
+    large: { label: 'Solar + Jeneratör',    img: '/images/gorsel-1.png' },
+    tall:  { label: 'Kabin Jeneratör',      img: '/images/gorsel-7.png' },
   },
 ]
 
 // Fixed right 4 images (2×2 grid)
 const fixedImages = [
-  { label: 'Aydınlatma',       bg: 'linear-gradient(135deg,#c8c8b8 0%,#a0a090 100%)' },
-  { label: 'Elektrik Şalteri', bg: 'linear-gradient(135deg,#b8c8d8 0%,#88a0b8 100%)' },
-  { label: 'Solar Panel',      bg: 'linear-gradient(135deg,#a8b8a0 0%,#788870 100%)' },
-  { label: 'Kablo Tesisatı',   bg: 'linear-gradient(135deg,#d0c0b0 0%,#a09080 100%)' },
+  { label: 'Dizel Jeneratör',    img: '/images/gorsel-3.png' },
+  { label: 'UPS Sistemleri',     img: '/images/gorsel-4.png' },
+  { label: 'Solar Panel Sahası', img: '/images/gorsel-5.png' },
+  { label: 'Enerji Çözümleri',   img: '/images/gorsel-2.png' },
 ]
 
 function GallerySection() {
@@ -692,54 +674,35 @@ function GallerySection() {
         {/* Gallery grid */}
         <div className="grid grid-cols-4 gap-3" style={{ height: '420px' }}>
 
-          {/* Col 1 — large featured card (carousel) with orange border + label always visible */}
-          <div
-            className="relative rounded-2xl overflow-hidden border-2 border-brand-orange transition-all duration-500"
-            style={{ background: current.large.bg }}
-          >
-            {/* Overlay gradient at bottom */}
-            <div className="absolute inset-0" style={{
-              background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 50%)'
-            }} />
-            {/* Label */}
-            <div className="absolute bottom-4 left-0 right-0 px-4 flex items-end justify-between">
+          {/* Col 1 — large featured card (carousel) with orange border */}
+          <div className="relative rounded-2xl overflow-hidden border-2 border-brand-orange transition-all duration-500">
+            <img src={current.large.img} alt={current.large.label} className="w-full h-full object-cover transition-all duration-500" />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 50%)' }} />
+            <div className="absolute bottom-4 left-14 right-4">
               <span className="text-white font-bold text-base drop-shadow">{current.large.label}</span>
             </div>
-            {/* Search icon badge — bottom left */}
             <div className="absolute bottom-4 left-4 w-9 h-9 bg-brand-orange rounded-xl flex items-center justify-center">
               <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
-            {/* Photo placeholder text */}
-            <div className="absolute top-4 right-4 text-white/20 text-xs">Fotoğraf</div>
           </div>
 
-          {/* Col 2 — tall card (carousel), spans full height */}
-          <div
-            className="relative rounded-2xl overflow-hidden transition-all duration-500"
-            style={{ background: current.tall.bg }}
-          >
-            <div className="absolute inset-0" style={{
-              background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%)'
-            }} />
+          {/* Col 2 — tall card (carousel) */}
+          <div className="relative rounded-2xl overflow-hidden transition-all duration-500">
+            <img src={current.tall.img} alt={current.tall.label} className="w-full h-full object-cover transition-all duration-500" />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%)' }} />
             <div className="absolute bottom-4 left-4">
               <span className="text-white font-bold text-sm drop-shadow">{current.tall.label}</span>
             </div>
-            <div className="absolute top-4 right-4 text-white/20 text-xs">Fotoğraf</div>
           </div>
 
           {/* Col 3 — 2 fixed stacked images */}
           <div className="flex flex-col gap-3">
             {[fixedImages[0], fixedImages[2]].map((img) => (
-              <div
-                key={img.label}
-                className="flex-1 relative rounded-2xl overflow-hidden"
-                style={{ background: img.bg }}
-              >
-                <div className="absolute inset-0" style={{
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 55%)'
-                }} />
+              <div key={img.label} className="flex-1 relative rounded-2xl overflow-hidden">
+                <img src={img.img} alt={img.label} className="w-full h-full object-cover" />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 55%)' }} />
                 <div className="absolute bottom-3 left-3">
                   <span className="text-white text-xs font-semibold drop-shadow">{img.label}</span>
                 </div>
@@ -750,14 +713,9 @@ function GallerySection() {
           {/* Col 4 — 2 fixed stacked images */}
           <div className="flex flex-col gap-3">
             {[fixedImages[1], fixedImages[3]].map((img) => (
-              <div
-                key={img.label}
-                className="flex-1 relative rounded-2xl overflow-hidden"
-                style={{ background: img.bg }}
-              >
-                <div className="absolute inset-0" style={{
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 55%)'
-                }} />
+              <div key={img.label} className="flex-1 relative rounded-2xl overflow-hidden">
+                <img src={img.img} alt={img.label} className="w-full h-full object-cover" />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 55%)' }} />
                 <div className="absolute bottom-3 left-3">
                   <span className="text-white text-xs font-semibold drop-shadow">{img.label}</span>
                 </div>
@@ -1126,20 +1084,14 @@ function CTABanner() {
 
           {/* LEFT — photo */}
           <div className="relative min-h-[420px] lg:min-h-0">
-            {/* Photo placeholder */}
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ background: 'linear-gradient(135deg, #6a8a7a 0%, #3a5a4a 100%)' }}
-            >
-              {/* Placeholder label */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white/30">
-                  <svg className="w-20 h-20 mx-auto mb-2 opacity-40" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <p className="text-sm">Elektrikçi Fotoğrafı</p>
-                </div>
-              </div>
+            {/* Photo */}
+            <div className="absolute inset-0">
+              <img
+                src="/images/gorsel-3.png"
+                alt="Motus Sistem — Dizel Jeneratör Sistemleri"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 100%)' }} />
             </div>
 
             {/* Certification badge — bottom left */}
