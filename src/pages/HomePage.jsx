@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 // ── Hero Section ──────────────────────────────────────────────────────────────
 const heroTabs = [
-  { label: 'AYDINLATMA' },
-  { label: 'EV ŞARJ' },
-  { label: 'ACİL SERVİS' },
+  { label: 'JENERATÖR' },
+  { label: 'UPS' },
+  { label: 'SOLAR SİSTEM' },
 ]
 
 function HeroSection() {
@@ -24,10 +24,10 @@ function HeroSection() {
           {/* LEFT: Text */}
           <div className="z-10">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-[1.0] text-white uppercase tracking-tight mb-4">
-              TAM HİZMET<br />ELEKTRİKÇİLER
+              KESİNTİSİZ<br />ENERJİ İÇİN<br />GÜÇLÜ ÇÖZÜMLER
             </h1>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white uppercase tracking-wide mb-8">
-              KONUTLAR + İŞYERLERİ
+            <h2 className="text-xl sm:text-2xl font-medium text-white/80 tracking-wide mb-8 normal-case max-w-md" style={{textTransform:'none', fontWeight:400}}>
+              Jeneratör, UPS ve enerji sistemlerinde uçtan uca hizmet
             </h2>
             <Link
               to="/iletisim"
@@ -68,9 +68,9 @@ function HeroSection() {
                   ))}
                 </div>
                 <p className="font-bold text-brand-black text-sm leading-tight mb-3">
-                  1000'den Fazla<br />Kişi Tarafından Güvenildi
+                  Uzman Teknik Ekip<br />ile Kesintisiz Hizmet
                 </p>
-                <a href="tel:+902123456789" className="flex items-center gap-3">
+                <a href="tel:+905301553544" className="flex items-center gap-3">
                   {/* Phone ring icon */}
                   <div className="w-10 h-10 shrink-0 relative">
                     <div className="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center">
@@ -83,7 +83,7 @@ function HeroSection() {
                   </div>
                   <div>
                     <p className="text-xs text-gray-500 font-medium">Hemen Ara</p>
-                    <p className="font-extrabold text-brand-black text-base">(212) 345 67 89</p>
+                    <p className="font-extrabold text-brand-black text-base">0 (530) 155 35 44</p>
                   </div>
                 </a>
               </div>
@@ -121,21 +121,29 @@ const stats = [
   {
     icon: (
       <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
-    title: 'Deneyimli',
-    subtitle: '15+ Yıllık Deneyim',
+    title: 'Uzman Teknik Ekip',
+    subtitle: 'Alanında deneyimli mühendisler',
   },
   {
     icon: (
       <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: 'Uygun Fiyat',
-    subtitle: 'Rekabetçi Fiyatlar',
+    title: 'Hızlı Servis',
+    subtitle: 'Arızada hızlı müdahale',
+  },
+  {
+    icon: (
+      <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+    title: 'Güvenilir Çözüm',
+    subtitle: 'Sertifikalı ürün ve kurulum',
   },
   {
     icon: (
@@ -143,18 +151,8 @@ const stats = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
       </svg>
     ),
-    title: 'Garanti',
-    subtitle: 'Tüm Hizmetlerde',
-  },
-  {
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="1.2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
-    title: 'Donanımlı',
-    subtitle: 'En Yeni Ekipmanlar',
+    title: 'Uçtan Uca Hizmet',
+    subtitle: 'Keşiften bakıma tam destek',
   },
 ]
 
@@ -225,8 +223,8 @@ function WhoWeAre() {
               className="absolute bottom-0 left-0 bg-white shadow-lg px-6 py-4"
               style={{ borderRadius: '0 12px 0 0', minWidth: '200px' }}
             >
-              <p className="font-extrabold text-brand-black text-base">Ahmet Kanmaz</p>
-              <p className="text-sm text-gray-500">Sahibi, Usta Elektrikçi</p>
+              <p className="font-extrabold text-brand-black text-base">Emre Kanmaz</p>
+              <p className="text-sm text-gray-500">Kurucu, Motus Sistem</p>
             </div>
           </div>
 
@@ -234,13 +232,13 @@ function WhoWeAre() {
           <div>
             <p className="text-xs font-bold tracking-[0.25em] uppercase text-gray-500 mb-4">Biz Kimiz</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brand-black uppercase leading-tight mb-6">
-              ELEKTRİK TAAHHÜTLERİNDE<br />DEĞER VE UZMANLIĞI<br />BULUŞTURUYORUZ
+              ENERJİ SİSTEMLERİNDE<br />UÇTAN UCA<br />ÇÖZÜM ORTAĞINIZ
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4 text-base">
-              Müşterilerimize iki dünyanın da en iyisini sunuyoruz: orta ölçekli bir elektrik yüklenicisinin kişiselleştirilmiş hizmeti ve düşük maliyeti ile büyük bir firmanın kaynakları ve yetenekleri.
+              Motus Sistem olarak; jeneratör, UPS ve enerji sistemleri alanında, işletmenizin kesintisiz ve güvenli enerjiye ulaşması için uçtan uca çözümler sunuyoruz.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8 text-base">
-              Tasarım-yapım uzmanlığı, güçlü tedarikçi ilişkileri, bağlanabilirlik ve yüksek deneyimli ekibimizle yüksek kaliteli, uygun maliyetli çözümler sunuyoruz.
+              Uzman ekibimizle keşiften kuruluma, bakım ve servis süreçlerine kadar tüm aşamalarda yanınızdayız. Güçlü altyapımız ve profesyonel çözümlerimizle işinizin ihtiyacı olan enerjiyi güvenle sağlıyoruz.
             </p>
             <Link
               to="/hakkimizda"
@@ -258,13 +256,13 @@ function WhoWeAre() {
 // ── Services ──────────────────────────────────────────────────────────────────
 
 const serviceCards = [
-  { title: 'Elektrik Tamiri',      href: '/hizmetler/elektrik-tamiri',     bg: 'linear-gradient(135deg, #b8cce0 0%, #8aaac8 100%)' },
-  { title: 'Acil Servis',          href: '/hizmetler/acil-servis',          bg: 'linear-gradient(135deg, #c8b8a0 0%, #a89078 100%)' },
-  { title: 'Aydınlatma Kurulumu',  href: '/hizmetler/aydinlatma-kurulumu',  bg: 'linear-gradient(135deg, #d8e0e8 0%, #b0c0d0 100%)' },
-  { title: 'EV Şarj Kurulumu',     href: '/hizmetler/ev-sarj-kurulumu',     bg: 'linear-gradient(135deg, #c8d8c0 0%, #a0b898 100%)' },
-  { title: 'Elektrik Şalterleri',  href: '/hizmetler/elektrik-salterleri',  bg: 'linear-gradient(135deg, #e0d0c0 0%, #c0a888 100%)' },
-  { title: 'Pano Yükseltme',       href: '/hizmetler/pano-yukseltme',       bg: 'linear-gradient(135deg, #b8c8d8 0%, #90a8c0 100%)' },
-  { title: 'Duman Dedektörleri',   href: '/hizmetler/duman-dedektorleri',   bg: 'linear-gradient(135deg, #d8d0c8 0%, #b8a898 100%)' },
+  { title: 'Dizel Jeneratörler',      href: '/urunler/dizel-jeneratorler',          bg: 'linear-gradient(135deg, #4a5a6a 0%, #2a3a4a 100%)' },
+  { title: 'Portatif Jeneratörler',   href: '/urunler/portatif-jeneratorler',       bg: 'linear-gradient(135deg, #5a6a5a 0%, #3a4a3a 100%)' },
+  { title: 'Jeneratör Kabin Setleri', href: '/urunler/jenerator-kabin-setleri',     bg: 'linear-gradient(135deg, #6a5a4a 0%, #4a3a2a 100%)' },
+  { title: 'UPS Sistemleri',          href: '/urunler/ups',                         bg: 'linear-gradient(135deg, #5a4a6a 0%, #3a2a4a 100%)' },
+  { title: 'Solar Pompa Sistemleri',  href: '/urunler/solar-sistemler/pompa',       bg: 'linear-gradient(135deg, #4a6a5a 0%, #2a4a3a 100%)' },
+  { title: 'Ev Paket Çözümleri',      href: '/urunler/solar-sistemler/ev-paket',    bg: 'linear-gradient(135deg, #6a6a4a 0%, #4a4a2a 100%)' },
+  { title: 'Senkron Panolar',         href: '/urunler/panolar/senkron',             bg: 'linear-gradient(135deg, #6a4a4a 0%, #4a2a2a 100%)' },
 ]
 
 function ServicesSection() {
@@ -273,9 +271,9 @@ function ServicesSection() {
       <div className="container-xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-xs font-bold tracking-[0.25em] uppercase text-gray-500 mb-3">Hizmetler</p>
+          <p className="text-xs font-bold tracking-[0.25em] uppercase text-gray-500 mb-3">Ürünlerimiz</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase text-white">
-            Uzman Elektrik Hizmetleri
+            Enerji Sistemleri Çözümlerimiz
           </h2>
         </div>
 
@@ -340,7 +338,7 @@ function ServicesSection() {
                 7/24
               </p>
               <p className="text-xl font-bold text-brand-black leading-snug">
-                Elektrikçiler,<br />Her Zaman<br />Yanınızda
+                Teknik Servis,<br />Her Zaman<br />Yanınızda
               </p>
             </div>
 
@@ -363,10 +361,10 @@ function ServicesSection() {
 
 // ── How We Work ────────────────────────────────────────────────────────────────
 const steps = [
-  { num: '01', title: 'Bizi Arayın',     desc: 'Ekibimizle iletişime geçin — elektrik ihtiyaçlarınızı dinlemeye ve yardımcı olmaya hazırız.' },
-  { num: '02', title: 'Keşif & Teklif',  desc: 'Sürpriz yok. İşi değerlendiriyor ve net, önceden belirlenmiş bir teklif sunuyoruz.' },
-  { num: '03', title: 'İşe Koyuluyoruz', desc: 'Uzman elektrikçilerimiz zamanında gelir. İşi güvenli ve verimli şekilde tamamlarız.' },
-  { num: '04', title: 'İş Tamamlandı!',  desc: 'Hepsi bu! Temiz, kaliteli iş — memnuniyetiniz garanti altında.' },
+  { num: '01', title: 'Güç & Yer Tespiti',   desc: 'Enerji ihtiyacınızı analiz ediyor, doğru güç seçimi ve en verimli kurulum alanını yerinde keşifle belirliyoruz.' },
+  { num: '02', title: 'Teklif & Planlama',   desc: 'Sürpriz yok. İhtiyacınıza özel sistem seçimi yapıyor, net ve şeffaf bir teklif sunuyoruz.' },
+  { num: '03', title: 'Kurulum & Devreye Alma', desc: 'Uzman ekibimiz sistemi standartlara uygun, güvenli ve verimli biçimde kurar ve devreye alır.' },
+  { num: '04', title: 'Bakım & Servis',      desc: 'Kurulum sonrası periyodik bakım ve hızlı servis desteğiyle sisteminizi her zaman hazır tutuyoruz.' },
 ]
 
 function HowWeWork() {
@@ -438,7 +436,7 @@ function HowWeWork() {
 
           {/* Phone button */}
           <a
-            href="tel:+902123456789"
+            href="tel:+905301553544"
             className="inline-flex items-center gap-3 bg-[#f5f0eb] px-6 py-4 font-bold text-sm text-brand-black hover:bg-[#ede8e2] transition-colors"
             style={{ borderRadius: '8px' }}
           >
@@ -446,7 +444,7 @@ function HowWeWork() {
             <svg className="w-5 h-5 text-brand-orange" fill="currentColor" viewBox="0 0 24 24">
               <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
             </svg>
-            (212) 345 67 89
+            0 (530) 155 35 44
           </a>
         </div>
 
@@ -523,28 +521,28 @@ function AdviceBanner() {
 
 // ── Why Choose Us ──────────────────────────────────────────────────────────────
 const certs = [
-  'LİSANS #184594',
-  'NFPA 70E',
-  'OSHA',
-  'DEVLET SERTİFİKALI ELEKTRİKÇİLER',
+  'TSE Uyumlu',
+  'IEC Standartları',
+  'Periyodik Bakım',
+  'Anahtar Teslim Kurulum',
 ]
 
 const reasons = [
   {
-    title: 'Yerel + Güvenilir',
-    desc: 'Topluluğumuza güvenilir, yüksek kaliteli elektrik işiyle hizmet etmekten gurur duyuyoruz.',
+    title: 'Uzman Mühendis Kadrosu',
+    desc: 'Alanında deneyimli teknik ekibimiz her projeye uzmanlık, güvenlik ve titizlikle yaklaşır.',
   },
   {
-    title: 'Uzman + Sertifikalı',
-    desc: 'Lisanslı elektrikçilerimiz her projeye uzmanlık, güvenlik ve hassasiyet katıyor.',
+    title: 'Hızlı Müdahale & Servis',
+    desc: 'Arıza anında hızlı servis desteğiyle minimum duruş süresi sağlıyor, sisteminizi tekrar devreye alıyoruz.',
   },
   {
-    title: 'Verimli + Zamanında',
-    desc: 'Zamanınıza ve bütçenize saygı gösteriyoruz — gecikmesiz sonuçlar teslim ediyoruz.',
+    title: 'Yerinde Keşif & Doğru Boyutlandırma',
+    desc: 'Güç analizi yaparak ihtiyacınıza en uygun sistemi belirliyor, gereksiz maliyetleri ortadan kaldırıyoruz.',
   },
   {
-    title: 'Dürüst Fiyatlandırma',
-    desc: 'Şeffaf, önceden belirlenmiş teklifler — gizli ücret yok, sadece dürüst iş.',
+    title: 'Şeffaf Fiyatlandırma',
+    desc: 'Keşif sonrası net ve yazılı teklif — gizli ücret yok, sürpriz yok, sadece dürüst iş.',
   },
 ]
 
@@ -571,10 +569,10 @@ function WhyChooseUs() {
                 Neden Bizi Seçmeli
               </p>
               <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-white leading-tight mb-4">
-                FARKI<br />HİSSEDİN
+                NEDEN<br />MOTUS<br />SİSTEM?
               </h2>
               <p className="text-white/80 text-base font-medium">
-                Kalite ve Özenle Taahhüt Edilmiş
+                Enerji kesintilerine karşı güçlü çözümler
               </p>
             </div>
 
@@ -995,20 +993,20 @@ function Testimonials() {
 // ── FAQ Section ───────────────────────────────────────────────────────────────
 const faqs = [
   {
-    q: 'Elektrik çalışması sırasında evinizin güvenliğini nasıl sağlıyorsunuz?',
-    a: 'Tüm çalışmalarımız öncesinde güvenlik kontrolü yapılır. Lisanslı elektrikçilerimiz gerekli önlemleri alarak çalışır; iş bittikten sonra tam test ve kontrol yapılır.',
+    q: 'Hangi güç kapasitesine ihtiyacım var? Bunu nasıl belirleyebilirim?',
+    a: 'Keşif hizmetimizle işletmenizin enerji ihtiyacını yerinde analiz ediyor, doğru kapasite ve sistem seçimi için ücretsiz danışmanlık sunuyoruz.',
   },
   {
-    q: 'Tadilat için doğru elektrikçiyi nasıl seçersiniz?',
-    a: 'Lisans ve sertifikayı kontrol edin, referans isteyin ve yazılı teklif alın. Biz her projede şeffaf fiyatlandırma ve belgelenmiş uzmanlık sunuyoruz.',
+    q: 'Jeneratör, UPS veya Solar sistem hangisi benim için uygun?',
+    a: 'İhtiyacınıza, bütçenize ve kullanım amacınıza göre en doğru sistemi birlikte belirliyoruz. Satış öncesi teknik danışmanlık tamamen ücretsizdir.',
   },
   {
-    q: 'Yenileme sırasında eski elektrik tesisatını yükseltebilir misiniz?',
-    a: 'Evet. Eski panoları, sigortaları ve kablo hatlarını güncel standartlara uygun hale getiriyor; aynı zamanda enerji verimliliğini artırıyoruz.',
+    q: 'Kurulum sonrası bakım hizmeti veriyor musunuz?',
+    a: 'Evet. Periyodik bakım sözleşmesi ile sisteminizin her zaman hazır ve sorunsuz çalışmasını garanti ediyoruz. Arıza anında hızlı servis desteği de sağlıyoruz.',
   },
   {
-    q: 'Acil elektrik arızalarında ne kadar sürede geliyorsunuz?',
-    a: '7/24 acil servisimiz İstanbul genelinde ortalama 60 dakika içinde yerinde hazır oluyor. Arayın, ekibimiz yola çıksın.',
+    q: 'Anahtar teslim kurulum ne anlama geliyor?',
+    a: 'Keşiften projelendirmeye, temin ve montajdan devreye almaya kadar tüm süreci biz yönetiyoruz. Siz sadece hazır sistemi teslim alıyorsunuz.',
   },
 ]
 

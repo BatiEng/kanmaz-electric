@@ -18,6 +18,9 @@ function ContactHero() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase text-brand-black leading-tight">
               BİZİMLE<br />İLETİŞİME<br />GEÇİN
             </h1>
+            <p className="text-gray-500 text-sm mt-4 max-w-xs">
+              Motus Sistem — Nilüfer, Bursa
+            </p>
 
             {/* Orange corner triangle — where card meets photo */}
             <div
@@ -78,8 +81,8 @@ function ContactHero() {
             <div>
               <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Adres</p>
               <p className="font-bold text-brand-black text-sm leading-snug">
-                Bağcılar Mahallesi, 15 Temmuz Cad. No:42<br />
-                Bağcılar, İstanbul, 34200
+                NİLTİM – Üçevler Mah. Ersan Sokak 8A Kat:1A<br />
+                İbrahim Yazıcı Plaza 2, 16120 Nilüfer/Bursa
               </p>
             </div>
           </div>
@@ -95,9 +98,9 @@ function ContactHero() {
             </div>
             <div>
               <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Bize Yazın</p>
-              <a href="mailto:info@kanmazelektrik.com"
+              <a href="mailto:emrekanmaz@motussistem.com"
                 className="font-bold text-brand-black text-sm hover:text-brand-orange transition-colors">
-                info@kanmazelektrik.com
+                emrekanmaz@motussistem.com
               </a>
             </div>
           </div>
@@ -111,9 +114,9 @@ function ContactHero() {
             </div>
             <div>
               <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">7/24 Acil</p>
-              <a href="tel:+902123456789"
+              <a href="tel:+905301553544"
                 className="font-bold text-brand-black text-sm hover:text-brand-orange transition-colors">
-                (212) 345 67 89
+                0 (530) 155 35 44
               </a>
             </div>
           </div>
@@ -133,9 +136,9 @@ const contactItems = [
       </svg>
     ),
     label: 'Telefon',
-    value: '(212) 345 67 89',
+    value: '0 (530) 155 35 44',
     subvalue: '7/24 Acil: (212) 999 00 11',
-    href: 'tel:+902123456789',
+    href: 'tel:+905301553544',
   },
   {
     icon: (
@@ -145,9 +148,9 @@ const contactItems = [
       </svg>
     ),
     label: 'E-posta',
-    value: 'info@kanmazelektrik.com',
+    value: 'emrekanmaz@motussistem.com',
     subvalue: 'destek@kanmazelektrik.com',
-    href: 'mailto:info@kanmazelektrik.com',
+    href: 'mailto:emrekanmaz@motussistem.com',
   },
   {
     icon: (
@@ -156,8 +159,8 @@ const contactItems = [
       </svg>
     ),
     label: 'Adres',
-    value: 'Bağcılar Mahallesi, 15 Temmuz Cad. No:42',
-    subvalue: 'Bağcılar, İstanbul, 34200',
+    value: 'NİLTİM – Üçevler Mah. Ersan Sokak 8A Kat:1A',
+    subvalue: 'İbrahim Yazıcı Plaza 2, 16120 Nilüfer/Bursa',
     href: null,
   },
   {
@@ -328,7 +331,7 @@ function MapSection() {
     <section className="w-full" style={{ height: '480px' }}>
       <iframe
         title="Kanmaz Elektrik Konum"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.2!2d28.8396!3d41.0382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa4b3b3b3b3b3%3A0x0!2sBa%C4%9Fc%C4%B1lar%2C%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3065.0!2d28.9784!3d40.2108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca153b8e7e7b45%3A0x0!2sNil%C3%BCfer%2C%20Bursa!5e0!3m2!1str!2str!4v1"
         width="100%"
         height="100%"
         style={{ border: 0, display: 'block' }}
@@ -385,7 +388,7 @@ function ContactFAQ() {
               </h2>
               <p className="text-sm text-gray-500">
                 Daha fazla bilgi için{' '}
-                <a href="tel:+902123456789" className="underline font-semibold text-brand-black hover:text-brand-orange transition-colors">
+                <a href="tel:+905301553544" className="underline font-semibold text-brand-black hover:text-brand-orange transition-colors">
                   bizi arayın
                 </a>
               </p>
@@ -416,7 +419,7 @@ function ContactFAQ() {
               </div>
               <h3 className="font-extrabold text-brand-black text-base mb-5">Sorularınız Basit Cevaplar Buluyor</h3>
               <a
-                href="tel:+902123456789"
+                href="tel:+905301553544"
                 className="inline-flex items-center gap-2 bg-brand-black text-white px-5 py-3 text-xs font-bold uppercase tracking-widest hover:bg-gray-900 transition-colors"
               >
                 Hemen Ara
@@ -533,10 +536,10 @@ export default function ContactPage() {
               />
 
               <h2 className="text-2xl md:text-3xl font-extrabold uppercase text-white leading-tight mb-3 pr-12">
-                Bugün Bize Ulaşın
+                Ücretsiz Keşif İçin Bize Yazın
               </h2>
               <p className="text-white/80 text-sm leading-relaxed mb-7">
-                Danışmanlık için veya elektrik projeniz hakkında daha fazla bilgi almak için bize ulaşın. Hayalinizdeki elektrik çözümünü birlikte hayata geçirelim!
+                Enerji sistemi ihtiyacınız için formu doldurun. Uzman ekibimiz en kısa sürede sizinle iletişime geçerek ücretsiz keşif ve teklif hazırlasın.
               </p>
 
               <ContactForm />

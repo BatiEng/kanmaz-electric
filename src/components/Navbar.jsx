@@ -183,7 +183,7 @@ export default function Navbar() {
               </svg>
             </div>
             <span className="text-base font-extrabold tracking-wide text-brand-black uppercase">
-              Kanmaz <span className="text-brand-black">Elektrik</span>
+              Motus <span className="text-brand-orange">Sistem</span>
             </span>
           </Link>
 
