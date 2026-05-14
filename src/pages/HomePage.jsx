@@ -97,9 +97,9 @@ function HeroSection() {
                 onClick={() => setActiveTab(i)}
                 className={`px-8 py-4 text-sm font-bold uppercase tracking-widest transition-colors duration-200
                   ${activeTab === i
-                    ? 'bg-[#5a3090] text-white'
-                    : 'bg-[#3a2070] text-white/70 hover:bg-[#4a2880] hover:text-white'
-                  }`}
+  ? 'bg-[#213348] text-white'
+  : 'bg-[#1a2638] text-white/70 hover:bg-[#213348] hover:text-white'
+}`}
               >
                 {tab.label}
               </button>
