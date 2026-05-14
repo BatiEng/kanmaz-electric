@@ -2,40 +2,69 @@ import { useState, useRef, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 const navLinks = [
-  { label: 'Ana Sayfa', href: '/' },
+  {
+    label: 'Şirket',
+    href: '/sirket',
+    children: [
+      { label: 'Vizyon Misyon',   href: '/sirket/vizyon-misyon' },
+      { label: 'Kalite Politika', href: '/sirket/kalite-politika' },
+      { label: 'Kurumsal Kimlik', href: '/sirket/kurumsal-kimlik' },
+    ],
+  },
+  {
+    label: 'Ürünler',
+    href: '/urunler',
+    children: [
+      { label: 'Dizel Jeneratörler',       href: '/urunler/dizel-jeneratorler' },
+      { label: 'Portatif Jeneratörler',    href: '/urunler/portatif-jeneratorler' },
+      { label: 'Jeneratör Kabin Setleri',  href: '/urunler/jenerator-kabin-setleri' },
+      { label: 'UPS',                      href: '/urunler/ups' },
+      {
+        label: 'Solar Sistemler',
+        href: '/urunler/solar-sistemler',
+        children: [
+          { label: 'Solar Pompa Sistemleri', href: '/urunler/solar-sistemler/pompa' },
+          { label: 'Ev Paket Çözümleri',     href: '/urunler/solar-sistemler/ev-paket' },
+          { label: 'Güneş Panelleri',        href: '/urunler/solar-sistemler/gunes-panelleri' },
+        ],
+      },
+      {
+        label: 'Panolar',
+        href: '/urunler/panolar',
+        children: [
+          { label: 'Senkron Panolar',   href: '/urunler/panolar/senkron' },
+          { label: 'Transfer Panoları', href: '/urunler/panolar/transfer' },
+          { label: 'Dağıtım Panoları',  href: '/urunler/panolar/dagitim' },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Teknik Bilgiler',
+    href: '/teknik-bilgiler',
+    children: [
+      { label: 'Güç Hesabı',     href: '/teknik-bilgiler/guc-hesabi' },
+      { label: 'Yakıt Tüketimi', href: '/teknik-bilgiler/yakit-tuketimi' },
+      { label: 'Dökümanlar',     href: '/teknik-bilgiler/dokumanlar' },
+    ],
+  },
   {
     label: 'Hizmetler',
     href: '/hizmetler',
     children: [
-      { label: 'Elektrik Tamiri', href: '/hizmetler/elektrik-tamiri' },
-      { label: 'Acil Servis', href: '/hizmetler/acil-servis' },
-      { label: 'Aydınlatma Kurulumu', href: '/hizmetler/aydinlatma-kurulumu' },
-      { label: 'EV Şarj Kurulumu', href: '/hizmetler/ev-sarj-kurulumu' },
-      { label: 'Elektrik Şalterleri', href: '/hizmetler/elektrik-salterleri' },
-      { label: 'Pano Yükseltme', href: '/hizmetler/pano-yukseltme' },
-      { label: 'Duman Dedektörleri', href: '/hizmetler/duman-dedektorleri' },
+      { label: 'Güç ve Yer Tesbiti',        href: '/hizmetler/guc-yer-tesbiti' },
+      { label: 'Periyodik Bakım ve Servis',  href: '/hizmetler/periyodik-bakim' },
+      { label: 'Yedek Parça',               href: '/hizmetler/yedek-parca' },
+      { label: 'Kiralama',                  href: '/hizmetler/kiralama' },
     ],
   },
-  {
-    label: 'Hakkımızda',
-    href: '/hakkimizda',
-    children: [
-      { label: 'Biz Kimiz', href: '/hakkimizda' },
-      { label: 'Liderlik', href: '/hakkimizda/liderlik' },
-      { label: 'SSS', href: '/hakkimizda/sss' },
-      { label: 'Blog', href: '/blog' },
-      { label: 'Kariyer', href: '/kariyer' },
-    ],
-  },
-  { label: 'Hizmet Bölgesi', href: '/hizmet-bolgesi' },
-  { label: 'Projeler', href: '/projeler' },
-  { label: 'Yorumlar', href: '/yorumlar' },
   { label: 'İletişim', href: '/iletisim' },
 ]
 
-function DropdownMenu({ items }) {
+// ── 2nd-level fly-out (opens to the right) ───────────────────────────────────
+function SubMenu({ items }) {
   return (
-    <div className="dropdown-menu absolute top-full left-0 mt-0 w-52 bg-white shadow-xl z-50 border-t-2 border-brand-orange">
+    <div className="absolute left-full top-0 ml-0 w-52 bg-white shadow-xl border-t-2 border-brand-orange z-50">
       {items.map((item) => (
         <Link
           key={item.href}
@@ -49,16 +78,86 @@ function DropdownMenu({ items }) {
   )
 }
 
+// ── 1st-level dropdown ────────────────────────────────────────────────────────
+function DropdownMenu({ items }) {
+  const [activeSub, setActiveSub] = useState(null)
+
+  return (
+    <div className="absolute top-full left-0 mt-0 w-56 bg-white shadow-xl z-50 border-t-2 border-brand-orange">
+      {items.map((item) => (
+        <div
+          key={item.href}
+          className="relative"
+          onMouseEnter={() => item.children && setActiveSub(item.label)}
+          onMouseLeave={() => item.children && setActiveSub(null)}
+        >
+          <Link
+            to={item.href}
+            className="flex items-center justify-between px-5 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-orange transition-colors"
+          >
+            <span>{item.label}</span>
+            {item.children && (
+              <svg className="w-3 h-3 text-gray-400 shrink-0 ml-2" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            )}
+          </Link>
+          {item.children && activeSub === item.label && (
+            <SubMenu items={item.children} />
+          )}
+        </div>
+      ))}
+    </div>
+  )
+}
+
+// ── Mobile: recursive accordion item ─────────────────────────────────────────
+function MobileItem({ item, depth }) {
+  const [expanded, setExpanded] = useState(false)
+  const location = useLocation()
+  const isActive = location.pathname === item.href
+  const pl = depth === 1 ? 'pl-4' : depth === 2 ? 'pl-8' : ''
+
+  return (
+    <div>
+      <div className={`flex items-center justify-between ${depth >= 1 ? 'border-l-2 ml-2 ' + (depth === 1 ? 'border-brand-orange' : 'border-gray-200') : ''}`}>
+        <Link
+          to={item.href}
+          className={`flex-1 py-2.5 text-sm font-semibold ${pl} ${isActive ? 'text-brand-orange' : 'text-brand-black'}`}
+        >
+          {item.label}
+        </Link>
+        {item.children && (
+          <button className="p-2 shrink-0" onClick={() => setExpanded(!expanded)}>
+            <svg
+              className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}
+              fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        )}
+      </div>
+      {item.children && expanded && (
+        <div className="pb-1">
+          {item.children.map((child) => (
+            <MobileItem key={child.href} item={child} depth={depth + 1} />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+// ── Main Navbar ────────────────────────────────────────────────────────────────
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
-  const [mobileExpanded, setMobileExpanded] = useState(null)
   const navRef = useRef(null)
   const location = useLocation()
 
   useEffect(() => {
     setMobileOpen(false)
-    setMobileExpanded(null)
   }, [location])
 
   useEffect(() => {
@@ -100,7 +199,7 @@ export default function Navbar() {
                 <Link
                   to={link.href}
                   className={`px-4 py-[26px] text-sm font-semibold flex items-center gap-1 border-b-2 transition-colors duration-150
-                    ${location.pathname === link.href
+                    ${location.pathname === link.href || location.pathname.startsWith(link.href + '/')
                       ? 'border-brand-black text-brand-black bg-gray-50'
                       : 'border-transparent text-gray-700 hover:text-brand-black hover:border-brand-black'
                     }`}
@@ -147,34 +246,12 @@ export default function Navbar() {
           <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg">
             <div className="container-xl py-4 flex flex-col">
               {navLinks.map((link) => (
-                <div key={link.href}>
-                  <div className="flex items-center justify-between">
-                    <Link
-                      to={link.href}
-                      className={`flex-1 py-3 text-sm font-semibold ${location.pathname === link.href ? 'text-brand-orange' : 'text-brand-black'}`}
-                    >
-                      {link.label}
-                    </Link>
-                    {link.children && (
-                      <button className="p-2" onClick={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}>
-                        <svg className={`w-4 h-4 transition-transform ${mobileExpanded === link.label ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                    )}
-                  </div>
-                  {link.children && mobileExpanded === link.label && (
-                    <div className="pl-4 pb-2 border-l-2 border-brand-orange ml-2">
-                      {link.children.map((child) => (
-                        <Link key={child.href} to={child.href} className="block py-2 text-sm text-gray-600 hover:text-brand-orange">
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                <MobileItem key={link.href} item={link} depth={0} />
               ))}
-              <Link to="/iletisim" className="mt-4 bg-brand-black text-white text-center py-3 font-bold text-sm flex items-center justify-center gap-2">
+              <Link
+                to="/iletisim"
+                className="mt-4 bg-brand-black text-white text-center py-3 font-bold text-sm flex items-center justify-center gap-2"
+              >
                 <svg className="w-4 h-4 text-brand-orange" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
