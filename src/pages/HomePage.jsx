@@ -15,7 +15,7 @@ function HeroSection() {
     <section
       className="relative overflow-hidden min-h-[88vh] flex flex-col"
       style={{
-        background: 'linear-gradient(120deg, #E84820 0%, #C83060 35%, #7030B0 65%, #3020C8 100%)',
+        background: 'linear-gradient(120deg,#e6823e 0%,#c86a44 25%,#7a4d66 60%,#213348 100%)',
       }}
     >
       <div className="container-xl flex-1 flex items-center py-16 md:py-20">
