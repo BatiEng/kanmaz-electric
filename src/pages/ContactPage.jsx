@@ -683,26 +683,7 @@ export default function ContactPage() {
       {/* ── Form Section ── */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-            {/* LEFT — photo */}
-            <div
-              className="relative overflow-hidden min-h-[420px] lg:min-h-0"
-              style={{ borderRadius: "16px" }}
-            >
-              <img
-                src="/images/gorsel-4.png"
-                alt="Motus Sistem — UPS ve Pano Sistemleri"
-                className="absolute inset-0 w-full h-full object-cover object-right"
-              />
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 100%)",
-                }}
-              />
-            </div>
-
+          <div className="">
             {/* RIGHT — orange form card */}
             <div
               className="relative bg-brand-orange p-8 md:p-10 flex flex-col justify-center"
