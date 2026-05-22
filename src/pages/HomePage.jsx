@@ -266,12 +266,12 @@ const serviceCards = [
   {
     title: "Portatif Jeneratörler",
     href: "/urunler/portatif-jeneratorler",
-    img: "/images/gorsel-6.png",
+    img: "/images/jena.png",
   },
   {
     title: "Jeneratör Kabin Setleri",
     href: "/urunler/jenerator-kabin-setleri",
-    img: "/images/jena.png",
+    img: "/images/gorsel-6.png",
   },
   {
     title: "UPS Sistemleri",
@@ -289,7 +289,7 @@ const serviceCards = [
     img: "/images/gorsel-1.png",
   },
   {
-    title: "Senkron Panolar",
+    title: "Panolar",
     href: "/urunler/panolar/senkron",
     img: "/images/gorsel-4-pano.png",
   },
@@ -1058,7 +1058,6 @@ export default function HomePage() {
       <HowWeWork />
       <WhyChooseUs />
 
-      <Testimonials />
       <FAQSection />
     </>
   );

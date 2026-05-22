@@ -24,7 +24,7 @@ function ContactHero() {
               Motus Sistem — Nilüfer, Bursa
             </p>
 
-            {/* Orange corner triangle — where card meets photo */}
+            {/* Orange corner triangle */}
             <div
               className="absolute bottom-0 right-0 hidden lg:block"
               style={{
@@ -48,14 +48,14 @@ function ContactHero() {
             />
           </div>
 
-          {/* RIGHT — photo */}
+          {/* RIGHT — single photo */}
           <div
             className="lg:col-span-3 relative overflow-hidden"
             style={{ borderRadius: "16px 16px 16px 0", minHeight: "340px" }}
           >
             <img
-              src="/images/gorsel-2.png"
-              alt="Motus Sistem — Enerji Sistemleri"
+              src="/images/contact.jpg"
+              alt="Motus Sistem — Pano ve Jeneratör Sistemleri"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div
@@ -70,7 +70,7 @@ function ContactHero() {
 
         {/* BOTTOM: 3-col contact info bar */}
         <div
-          className="grid grid-cols-1 md:grid-cols-3 border-t border-gray-150 mt-0"
+          className="grid grid-cols-1 md:grid-cols-3 border-t mt-0"
           style={{ borderColor: "#e5e7eb" }}
         >
           {/* Col 1 — Address */}
@@ -82,9 +82,13 @@ function ContactHero() {
               <svg
                 className="w-6 h-6 text-brand-black"
                 fill="currentColor"
-                viewBox="0 0 24 24"
+                viewBox="0 0 20 20"
               >
-                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <path
+                  fillRule="evenodd"
+                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  clipRule="evenodd"
+                />
               </svg>
             </div>
             <div>
@@ -450,10 +454,10 @@ function ContactForm() {
 // ── Map Section ───────────────────────────────────────────────────────────────
 function MapSection() {
   return (
-    <section className="w-full" style={{ height: "480px" }}>
+    <section className="w-full relative" style={{ height: "480px" }}>
       <iframe
-        title="Kanmaz Elektrik Konum"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.987!2d28.971!3d40.2245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sN%C4%B0LT%C4%B0M%20%C3%9C%C3%A7evler%20Mah.%20Ersan%20Sk.%208A%20Kat%3A1A%2C%20%C4%B0brahim%20Yaz%C4%B1c%C4%B1%20Plaza%202%2C%2016120%20Nil%C3%BCfer%2FBursa!5e0!3m2!1str!2str!4v1"
+        title="Motus Sistem Konum"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.8847397604277!2d28.931899511961294!3d40.211626771354354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca11087820f7cb%3A0xf357a2e177e171e9!2sCampusPlus!5e0!3m2!1str!2str!4v1779432893523!5m2!1str!2str"
         width="100%"
         height="100%"
         style={{ border: 0, display: "block" }}
@@ -461,6 +465,31 @@ function MapSection() {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
       />
+
+      {/* Address overlay — top left */}
+      <div className="absolute top-4 left-4 z-10 bg-white shadow-lg rounded-xl p-4 flex items-start gap-3 max-w-[280px]">
+        <svg
+          className="w-5 h-5 text-brand-orange shrink-0 mt-0.5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fillRule="evenodd"
+            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+            clipRule="evenodd"
+          />
+        </svg>
+        <div>
+          <p className="font-extrabold text-brand-black text-sm">
+            Motus Sistem
+          </p>
+          <p className="text-gray-500 text-xs leading-relaxed mt-0.5">
+            NİLTİM – Üçevler Mah. Ersan Sk. 8A Kat:1A
+            <br />
+            İbrahim Yazıcı Plaza 2, 16120 Nilüfer/Bursa
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
@@ -712,9 +741,6 @@ export default function ContactPage() {
       </section>
 
       <MapSection />
-
-      {/* FAQ Section */}
-      <ContactFAQ />
     </>
   );
 }
