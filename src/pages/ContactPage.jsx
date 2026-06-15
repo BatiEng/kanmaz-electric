@@ -6,7 +6,7 @@ function ContactHero() {
   return (
     <section className="bg-white pt-10 pb-0 overflow-hidden">
       <div className="container-xl">
-        {/* TOP: text card + photo */}
+        {/* TOP: text card */}
         <div className="relative grid grid-cols-1 lg:grid-cols-5 items-end gap-0">
           {/* LEFT — white text card */}
           <div className="relative z-10 bg-white lg:col-span-2 pb-10 pt-6 pr-8">
