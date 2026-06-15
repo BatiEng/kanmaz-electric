@@ -18,15 +18,29 @@ function Hero() {
               TESPİTİ
             </h1>
             <p className="text-gray-500 text-sm mt-4 max-w-xs">
-              Doğru güç analizi ve uygun yerleşim planlaması ile güvenilir enerji çözümleri
+              Doğru güç analizi ve uygun yerleşim planlaması ile güvenilir
+              enerji çözümleri
             </p>
             <div
               className="absolute bottom-0 right-0 hidden lg:block"
-              style={{ width: 0, height: 0, borderStyle: "solid", borderWidth: "0 0 56px 56px", borderColor: "transparent transparent white transparent", zIndex: 20 }}
+              style={{
+                width: 0,
+                height: 0,
+                borderStyle: "solid",
+                borderWidth: "0 0 56px 56px",
+                borderColor: "transparent transparent white transparent",
+                zIndex: 20,
+              }}
             />
             <div
               className="absolute bottom-0 right-0 hidden lg:block"
-              style={{ width: 56, height: 56, background: "#FB5800", clipPath: "polygon(0 100%, 100% 100%, 100% 0)", zIndex: 15 }}
+              style={{
+                width: 56,
+                height: 56,
+                background: "#FB5800",
+                clipPath: "polygon(0 100%, 100% 100%, 100% 0)",
+                zIndex: 15,
+              }}
             />
           </div>
           <div
@@ -34,7 +48,7 @@ function Hero() {
             style={{ borderRadius: "16px 16px 16px 0", minHeight: "360px" }}
           >
             <img
-              src="/images/tes-1.png"
+              src="/images/gorsel-1.png"
               alt="Motus Sistem — Güç ve Yer Tespiti"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -91,7 +105,15 @@ const steps = [
     desc: "Saha koşulları incelenir, ekipman yerleşimi ve altyapı ihtiyaçları belirlenir.",
     img: "/images/tes-1.png",
     icon: (
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <svg
+        viewBox="0 0 32 32"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-7 h-7"
+      >
         <path d="M16 2C11.03 2 7 6.03 7 11c0 7 9 19 9 19s9-12 9-19c0-4.97-4.03-9-9-9z" />
         <circle cx="16" cy="11" r="3" />
       </svg>
@@ -103,7 +125,15 @@ const steps = [
     desc: "Yük analizi yapılır, doğru güç seçimi ve sistem tasarımı gerçekleştirilir.",
     img: "/images/tes-2.png",
     icon: (
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <svg
+        viewBox="0 0 32 32"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-7 h-7"
+      >
         <path d="M17 3L6 18h9l-2 11 11-15h-9l2-11z" />
       </svg>
     ),
@@ -114,7 +144,15 @@ const steps = [
     desc: "Ekipmanlar üretilir, sahaya sevk edilir ve uzman ekibimiz tarafından kurulumu gerçekleştirilir.",
     img: "/images/tes-3.png",
     icon: (
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <svg
+        viewBox="0 0 32 32"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-7 h-7"
+      >
         <path d="M27 7l-2.5 2.5M5 27l9.5-9.5" />
         <path d="M20.5 4.5a4.95 4.95 0 0 1 7 7l-3 3-7-7 3-3z" />
         <path d="M11.5 13.5l7 7-8 4.5-3.5-3.5 4.5-8z" />
@@ -127,7 +165,15 @@ const steps = [
     desc: "Sistem testleri yapılır, devreye alma işlemleri tamamlanır ve teslim edilir.",
     img: "/images/tes-4.png",
     icon: (
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <svg
+        viewBox="0 0 32 32"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-7 h-7"
+      >
         <circle cx="16" cy="16" r="13" />
         <path d="M10 16l4.5 4.5 7.5-8" strokeWidth="2.5" />
       </svg>
@@ -139,7 +185,6 @@ function Steps() {
   return (
     <section className="py-16 md:py-20 bg-white">
       <div className="container-xl">
-
         {/* Photo strip — full width, 4 equal columns, no gap */}
         <div className="flex w-full mb-0 overflow-hidden rounded-xl">
           {steps.map((s, i) => (
@@ -154,10 +199,10 @@ function Steps() {
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-brand-black/20" />
-              <div
-                className="absolute top-3 left-3 w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center shadow"
-              >
-                <span className="text-white font-extrabold text-sm">{s.number}</span>
+              <div className="absolute top-3 left-3 w-8 h-8 rounded-full bg-brand-orange flex items-center justify-center shadow">
+                <span className="text-white font-extrabold text-sm">
+                  {s.number}
+                </span>
               </div>
               {/* thin separator line between photos */}
               {i < steps.length - 1 && (
@@ -174,7 +219,9 @@ function Steps() {
               <div className="w-14 h-14 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center text-brand-black mb-4">
                 {s.icon}
               </div>
-              <p className="text-xs font-bold text-brand-orange mb-1">{s.number}.</p>
+              <p className="text-xs font-bold text-brand-orange mb-1">
+                {s.number}.
+              </p>
               <h3 className="font-extrabold text-brand-black text-xs uppercase tracking-wide mb-2 leading-snug">
                 {s.title}
               </h3>
@@ -182,7 +229,6 @@ function Steps() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
@@ -193,7 +239,10 @@ function CTABanner() {
   return (
     <section
       className="py-16"
-      style={{ background: "linear-gradient(120deg,#e6823e 0%,#c86a44 25%,#7a4d66 60%,#213348 100%)" }}
+      style={{
+        background:
+          "linear-gradient(120deg,#e6823e 0%,#c86a44 25%,#7a4d66 60%,#213348 100%)",
+      }}
     >
       <div className="container-xl text-center">
         <p className="text-xs font-bold tracking-[0.25em] uppercase text-white/60 mb-4">

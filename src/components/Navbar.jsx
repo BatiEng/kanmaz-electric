@@ -207,18 +207,16 @@ export default function Navbar() {
                 }
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <Link
-                  to={link.href}
-                  className={`px-4 py-[26px] text-sm font-semibold flex items-center gap-1 border-b-2 transition-colors duration-150
-                    ${
-                      location.pathname === link.href ||
-                      location.pathname.startsWith(link.href + "/")
-                        ? "border-brand-black text-brand-black bg-gray-50"
-                        : "border-transparent text-gray-700 hover:text-brand-black hover:border-brand-black"
-                    }`}
-                >
-                  {link.label}
-                  {link.children && (
+                {link.children ? (
+                  <button
+                    className={`px-4 py-[26px] text-sm font-semibold flex items-center gap-1 border-b-2 transition-colors duration-150 cursor-default
+                      ${
+                        location.pathname.startsWith(link.href + "/")
+                          ? "border-brand-black text-brand-black bg-gray-50"
+                          : "border-transparent text-gray-700 hover:text-brand-black hover:border-brand-black"
+                      }`}
+                  >
+                    {link.label}
                     <svg
                       className="w-3 h-3 mt-0.5 text-gray-400"
                       fill="none"
@@ -226,14 +224,22 @@ export default function Navbar() {
                       strokeWidth="2.5"
                       viewBox="0 0 24 24"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M19 9l-7 7-7-7"
-                      />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                     </svg>
-                  )}
-                </Link>
+                  </button>
+                ) : (
+                  <Link
+                    to={link.href}
+                    className={`px-4 py-[26px] text-sm font-semibold flex items-center gap-1 border-b-2 transition-colors duration-150
+                      ${
+                        location.pathname === link.href
+                          ? "border-brand-black text-brand-black bg-gray-50"
+                          : "border-transparent text-gray-700 hover:text-brand-black hover:border-brand-black"
+                      }`}
+                  >
+                    {link.label}
+                  </Link>
+                )}
                 {link.children && activeDropdown === link.label && (
                   <DropdownMenu items={link.children} />
                 )}

@@ -49,7 +49,7 @@ function KaliteHero() {
             style={{ borderRadius: "16px 16px 16px 0", minHeight: "340px" }}
           >
             <img
-              src="/images/gorsel-5.png"
+              src="/images/kalpol.png"
               alt="Motus Sistem — Kalite Politikası"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -111,8 +111,8 @@ function PolicyText() {
               gerekliliklere tam uyumlu ve sürdürülebilir hizmet anlayışıyla
               tamamlamayı taahhüt ediyoruz. Eğitimli teknik kadromuz, çözüm
               odaklı yaklaşımımız ve sürekli gelişim anlayışımız ile sektörde
-              güvenilir ve örnek bir marka olma hedefiyle çalışmalarımıza
-              devam ediyoruz.
+              güvenilir ve örnek bir marka olma hedefiyle çalışmalarımıza devam
+              ediyoruz.
             </p>
             <p>
               Motus Sistem olarak; ülke ekonomisine katkı sağlayan, çevreye ve
@@ -148,7 +148,11 @@ const values = [
       <svg viewBox="0 0 64 64" fill="currentColor" className="w-14 h-14">
         <path d="M32 4C16.5 4 4 16.5 4 32s12.5 28 28 28 28-12.5 28-28S47.5 4 32 4zm-2 42L16 32l4-4 10 10 18-18 4 4-22 22z" />
         <circle cx="44" cy="48" r="8" opacity=".3" />
-        <path d="M40 46l2 2 4-4 1.5 1.5-5.5 5.5-3.5-3.5z" fill="white" opacity=".8" />
+        <path
+          d="M40 46l2 2 4-4 1.5 1.5-5.5 5.5-3.5-3.5z"
+          fill="white"
+          opacity=".8"
+        />
       </svg>
     ),
   },
@@ -177,7 +181,10 @@ function Values() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {values.map((v) => (
-            <div key={v.title} className="flex flex-col items-center text-center px-4">
+            <div
+              key={v.title}
+              className="flex flex-col items-center text-center px-4"
+            >
               <div className="text-brand-black mb-5">{v.icon}</div>
               <h3 className="text-base font-extrabold text-brand-black mb-3">
                 {v.title}

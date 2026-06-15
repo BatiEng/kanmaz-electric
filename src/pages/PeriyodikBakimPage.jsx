@@ -5,8 +5,8 @@ function Hero() {
   return (
     <section className="bg-white pt-10 pb-0 overflow-hidden">
       <div className="container-xl">
-        <div className="relative grid grid-cols-1 lg:grid-cols-5 items-end gap-0">
-          <div className="relative z-10 bg-white lg:col-span-2 pb-10 pt-6 pr-8">
+        <div className="relative grid grid-cols-1 lg:grid-cols-5 items-center gap-8">
+          <div className="relative z-10 bg-white lg:col-span-2 py-10 pr-8 flex flex-col justify-center">
             <p className="text-xs font-bold tracking-[0.25em] uppercase text-gray-400 mb-4">
               Hizmetler
             </p>
@@ -20,12 +20,9 @@ function Hero() {
             <p className="text-gray-500 text-sm mt-4 max-w-xs">
               Kesintisiz çalışma için profesyonel bakım hizmetleri
             </p>
-            <div className="absolute bottom-0 right-0 hidden lg:block" style={{ width: 0, height: 0, borderStyle: "solid", borderWidth: "0 0 56px 56px", borderColor: "transparent transparent white transparent", zIndex: 20 }} />
-            <div className="absolute bottom-0 right-0 hidden lg:block" style={{ width: 56, height: 56, background: "#FB5800", clipPath: "polygon(0 100%, 100% 100%, 100% 0)", zIndex: 15 }} />
           </div>
-          <div className="lg:col-span-3 relative overflow-hidden" style={{ borderRadius: "16px 16px 16px 0", minHeight: "360px" }}>
-            <img src="/images/jen-bak.png" alt="Motus Sistem — Periyodik Bakım ve Servis" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-brand-black/20" />
+          <div className="lg:col-span-3 relative overflow-hidden flex items-center justify-center" style={{ borderRadius: "16px", background: "#ffffff", maxHeight: "420px" }}>
+            <img src="/images/jen-bak.png" alt="Motus Sistem — Periyodik Bakım ve Servis" className="w-full object-contain" style={{ maxHeight: "420px" }} />
           </div>
         </div>
       </div>
