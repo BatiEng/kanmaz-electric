@@ -25,33 +25,7 @@ const navLinks = [
         href: "/urunler/jenerator-kabin-setleri",
       },
       { label: "UPS", href: "/urunler/ups" },
-      {
-        label: "Solar Sistemler",
-        href: "/urunler/solar-sistemler",
-        children: [
-          {
-            label: "Solar Pompa Sistemleri",
-            href: "/urunler/solar-sistemler/pompa",
-          },
-          {
-            label: "Ev Paket Çözümleri",
-            href: "/urunler/solar-sistemler/ev-paket",
-          },
-          {
-            label: "Güneş Panelleri",
-            href: "/urunler/solar-sistemler/gunes-panelleri",
-          },
-        ],
-      },
-      {
-        label: "Panolar",
-        href: "/urunler/panolar",
-        children: [
-          { label: "Senkron Panolar", href: "/urunler/panolar/senkron" },
-          { label: "Transfer Panoları", href: "/urunler/panolar/transfer" },
-          { label: "Dağıtım Panoları", href: "/urunler/panolar/dagitim" },
-        ],
-      },
+      { label: "Panolar", href: "/urunler/panolar" },
     ],
   },
   {
@@ -67,12 +41,11 @@ const navLinks = [
     label: "Hizmetler",
     href: "/hizmetler",
     children: [
-      { label: "Güç ve Yer Tesbiti", href: "/hizmetler/guc-yer-tesbiti" },
+      { label: "Güç ve Yer Tespiti", href: "/hizmetler/guc-yer-tespiti" },
       {
         label: "Periyodik Bakım ve Servis",
         href: "/hizmetler/periyodik-bakim",
       },
-      { label: "Yedek Parça", href: "/hizmetler/yedek-parca" },
       { label: "Kiralama", href: "/hizmetler/kiralama" },
     ],
   },
