@@ -12,6 +12,7 @@ import KabinSetleriPage from './pages/KabinSetleriPage'
 import GucYerTespiti from './pages/GucYerTespiti'
 import PeriyodikBakimPage from './pages/PeriyodikBakimPage'
 import KiralamaPage from './pages/KiralamaPage'
+import GucHesabiPage from './pages/GucHesabiPage'
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
             <Route path="/hizmetler/guc-yer-tespiti" element={<GucYerTespiti />} />
             <Route path="/hizmetler/periyodik-bakim" element={<PeriyodikBakimPage />} />
             <Route path="/hizmetler/kiralama" element={<KiralamaPage />} />
+            <Route path="/teknik-bilgiler/guc-hesabi" element={<GucHesabiPage />} />
           </Routes>
         </main>
         <Footer />
