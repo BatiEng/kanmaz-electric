@@ -8,7 +8,7 @@ const navLinks = [
     children: [
       { label: "Vizyon Misyon", href: "/sirket/vizyon-misyon" },
       { label: "Kalite Politika", href: "/sirket/kalite-politika" },
-      { label: "Kurumsal Kimlik", href: "/sirket/kurumsal-kimlik" },
+      { label: "Hakkımızda", href: "/sirket/hakkimizda" },
     ],
   },
   {
