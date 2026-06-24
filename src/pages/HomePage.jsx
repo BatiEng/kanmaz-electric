@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const heroTabs = [
   { label: "JENERATÖR" },
   { label: "UPS" },
-  { label: "SOLAR SİSTEM" },
 ];
 
 function HeroSection() {

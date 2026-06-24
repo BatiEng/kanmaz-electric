@@ -124,31 +124,29 @@ function MobileItem({ item, depth }) {
       <div
         className={`flex items-center justify-between ${depth >= 1 ? "border-l-2 ml-2 " + (depth === 1 ? "border-brand-orange" : "border-gray-200") : ""}`}
       >
-        <Link
-          to={item.href}
-          className={`flex-1 py-2.5 text-sm font-semibold ${pl} ${isActive ? "text-brand-orange" : "text-brand-black"}`}
-        >
-          {item.label}
-        </Link>
-        {item.children && (
+        {item.children ? (
           <button
-            className="p-2 shrink-0"
+            className={`flex-1 flex items-center justify-between py-2.5 text-sm font-semibold text-left ${pl} ${isActive ? "text-brand-orange" : "text-brand-black"}`}
             onClick={() => setExpanded(!expanded)}
           >
+            <span>{item.label}</span>
             <svg
-              className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`}
+              className={`w-4 h-4 text-gray-400 transition-transform duration-200 shrink-0 mr-2 ${expanded ? "rotate-180" : ""}`}
               fill="none"
               stroke="currentColor"
               strokeWidth="2.5"
               viewBox="0 0 24 24"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19 9l-7 7-7-7"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
+        ) : (
+          <Link
+            to={item.href}
+            className={`flex-1 py-2.5 text-sm font-semibold ${pl} ${isActive ? "text-brand-orange" : "text-brand-black"}`}
+          >
+            {item.label}
+          </Link>
         )}
       </div>
       {item.children && expanded && (

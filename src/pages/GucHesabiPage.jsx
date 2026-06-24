@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 // ── Single Calculator Card ─────────────────────────────────────────────────
 function CalcCard({ title, formula, fields, compute }) {
-  const init = () => Object.fromEntries(fields.map((f) => [f.key, ""]));
+  const init = () => Object.fromEntries(fields.map((f) => [f.key, f.key === "PF" ? "0.8" : ""]));
   const [vals, setVals] = useState(init);
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");

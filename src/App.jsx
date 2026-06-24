@@ -14,6 +14,8 @@ import PeriyodikBakimPage from './pages/PeriyodikBakimPage'
 import KiralamaPage from './pages/KiralamaPage'
 import GucHesabiPage from './pages/GucHesabiPage'
 import HakkimizdaPage from './pages/HakkimizdaPage'
+import YakitTuketimPage from './pages/YakitTuketimPage'
+import UpsPage from './pages/UpsPage'
 
 export default function App() {
   return (
@@ -35,6 +37,8 @@ export default function App() {
             <Route path="/hizmetler/periyodik-bakim" element={<PeriyodikBakimPage />} />
             <Route path="/hizmetler/kiralama" element={<KiralamaPage />} />
             <Route path="/teknik-bilgiler/guc-hesabi" element={<GucHesabiPage />} />
+            <Route path="/teknik-bilgiler/yakit-tuketimi" element={<YakitTuketimPage />} />
+            <Route path="/urunler/ups" element={<UpsPage />} />
             <Route path="/sirket/hakkimizda" element={<HakkimizdaPage />} />
           </Routes>
         </main>
